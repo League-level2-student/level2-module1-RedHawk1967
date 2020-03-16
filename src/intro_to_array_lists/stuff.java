@@ -1,5 +1,6 @@
 package intro_to_array_lists;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,15 +15,24 @@ JFrame frame = new JFrame();
 JPanel panel = new JPanel();
 JTextField box1 = new JTextField();
 JTextField box2 = new JTextField();
-JLabel label = new JLabel();
+JLabel ans = new JLabel();
 JButton button = new JButton();
+
 void making() {
+	
+	ans.setSize(new Dimension(100,100));
+	box1.setSize(new Dimension(100,100));
+	box2.setSize(new Dimension(100,100));
+	button.setSize(new Dimension(100,100));
 	button.addActionListener(this);
 	panel.add(box1);
 	panel.add(box2);
-	panel.add(label);
+	panel.add(ans);
 	panel.add(button);
+
 	frame.add(panel);
+	
+		
 	frame.setVisible(true);
 	frame.pack();
 
@@ -32,11 +42,15 @@ void making() {
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	
-String num1 = box1.getText();
-String num2 = box2.getText();
-int num22.quals(num2);
+String percentnum = box1.getText();
+String num = box2.getText();
 
-label = 
+
+float percentnumint = Integer.parseInt(percentnum);
+float numint = Integer.parseInt(num);
+float answer = percentnumint * numint / 100;
+String sans = String.valueOf(answer);
+ans.setText(sans);
 
 }
 
